@@ -177,8 +177,45 @@ textarea {
   text-decoration: none;
 }
 
-.sidebar-footer a:hover {
+.sidebar-footer-links {
+  display: flex;
+  gap: 10px;
+}
+
+.sidebar-footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(220, 232, 248, 0.16);
+  border-radius: 999px;
+  background: rgba(245, 248, 255, 0.04);
+  color: rgba(245, 248, 255, 0.78);
+  transition:
+    transform 140ms ease,
+    color 140ms ease,
+    border-color 140ms ease,
+    background 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.sidebar-footer a svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sidebar-footer a:hover,
+.sidebar-footer a:focus-visible {
+  transform: translateY(-1px);
   color: var(--accent-warm);
+  border-color: rgba(255, 215, 168, 0.42);
+  background: rgba(255, 215, 168, 0.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+.sidebar-footer a:focus-visible {
+  outline: none;
 }
 
 .output-text {
